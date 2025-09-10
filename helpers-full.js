@@ -1,3 +1,4 @@
+console.log("Hello from Helpers-full.js!");
 /* helpers-full.js
  * Student-friendly helper functions for building interactive apps (App Lab–style).
  * Include AFTER your HTML elements.
