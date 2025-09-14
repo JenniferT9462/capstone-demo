@@ -13,27 +13,63 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 class="text-center">Random Horror GIF Generator 👻</h1>
+    <h1 class="text-center">👻 The Horror Station 👻</h1>
+    <button id="playBtn" class="btn btn-danger mb-4">Play Me 🎃</button>
+    <h2>🦇 Get Halloween Facts🦇</h2>
     <div class="input-group mb-3 shadow">
-      <input
+      <!-- <input
         id="user-prompt"
         type="text"
-        class="form-control border border-2 border-info"
+        class="form-control border border-2 border-danger"
         placeholder="Write something here..."
-      />
-      <button class="btn btn-outline-info" type="button" id="send-btn">
-        Button
+      /> -->
+      <select class="form-select bg-dark text-white" name="user-prompt" id="user-prompt">
+        <option value="jack-o-lanterns">Jack-o-Lanterns</option>
+        <option value="witches">Witches</option>
+        <option value="ghosts">Ghosts</option>
+        <option value="vampires">Vampires</option>
+      </select>
+      <button class="btn btn-outline-danger" type="button" id="send-btn">
+        Stab Me 🔪
       </button>
     </div>
-
     <!-- Output card -->
-    <div class="card border border-2 border-success p-2 shadow">
-      <div class="card-body">
-        <div class="card-title">Output...</div>
-        <pre
-          id="output"
-          class="card-text"
-        ><img id="gifDisplay" src="" alt="A random horror GIF will appear here."></pre>
+    <div class="card-body">
+      <div class="card-title">Output...</div>
+      <pre id="output" class="card-text"></pre>
+    </div>
+
+    <!-- Movie of the day -->
+    <div class="container-fluid mb-3 shadow text-center">
+      <h2>🍿 Horror Movie of the Day! 🍿</h2>
+      <button class="btn btn-danger" id="movieBtn">Get Movie</button>
+      <div id="movieDisplay" class="card text-white m-auto" style="width: 375px;">
+        <div class="card-body">
+          <img
+            class="img-top"
+            id="movie-poster"
+            src="horror-movie-poster.jpg"
+            alt="Horror Movie Poster"
+          />
+          <div id="movie-title" class="card-title"></div>
+          <div id="movie-overview" class="card-text"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card border border-2 border-success p-2 shadow text-center w-75 m-auto">
+      <!-- Random Horror Movie GIF area -->
+      <div>
+        <h1>🎃 The Horror GIF of the Day!! 🎃</h1>
+      
+        <img
+          id="gif-display"
+          src="elvira.gif"
+          alt="A random horror GIF will appear here."
+          hidden
+          class="d-block mx-auto mb-3"
+        />
+        <button id="gif-btn" class="btn btn-danger">Get GIF</button>
       </div>
     </div>
 
